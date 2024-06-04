@@ -1,0 +1,725 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #fff; /* 更改默认文字颜色 */
+}
+
+body {
+    background-image: url(/backGround.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#overlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    position: fixed;
+    transition: background-color 0.5s ease;
+    z-index: -100;
+}
+
+.menu {
+    background-color: #000; /* 更改菜单背景颜色 */
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.menu h3 {
+    padding: 20px;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.greet p {
+    background-color: rgba(0, 0, 0, 0.7); /* 降低透明度 */
+    border-radius: 20px;
+    padding: 20px; /* 统一内边距 */
+    margin: 3rem auto; /* 居中显示 */
+    max-width: 800px; /* 设置最大宽度 */
+    line-height: 1.6;
+}
+
+.map h1 {
+    margin-top: 100px;
+    padding: 20px;
+    background-color: #000; /* 更改地图标题背景颜色 */
+    text-align: center;
+    font-size: 4rem;
+    border-radius: 12px;
+    line-height: 100px;
+    height: fit-content;
+}
+
+.map img{
+    width: 80%;
+}
+
+.location {
+    margin-top: 50px;
+    text-align: center; /* 居中显示 */
+}
+
+.location h3 {
+    font-size: 2rem; /* 减小字号 */
+    background-color: #000; /* 更改位置标题背景颜色 */
+    padding: 10px 20px; /* 增加内边距 */
+    border-radius: 12px;
+    display: inline-block; /* 让标题和地图链接在同一行 */
+}
+
+.location p {
+    background-color: rgba(0, 0, 0, 0.7); /* 降低透明度 */
+    border-radius: 12px;
+    padding: 10px; /* 统一内边距 */
+    max-width: 400px; /* 设置最大宽度 */
+    margin: 20px auto; /* 居中显示 */
+}
+
+.culture {
+    margin-top: 50px; /* 增加和local-life之间的间距 */
+    text-align: center; /* 居中显示 */
+}
+
+.culture h1 {
+    font-size: 3rem; /* 减小字号 */
+    background-color: #000; /* 更改文化标题背景颜色 */
+    padding: 10px 20px; /* 增加内边距 */
+    border-radius: 12px;
+    display: inline-block; /* 让标题和文本在同一行 */
+}
+
+.culture p {
+    width: 80%; /* 文本宽度为80% */
+    margin: 20px auto; /* 居中显示 */
+    font-size: 1.2rem; /* 设置字体大小 */
+}
+
+.culture .maori {
+    margin-top: 30px;
+    text-align: left; /* 文本左对齐 */
+}
+
+.culture .maori p {
+    margin-top: 20px; /* 减小上边距 */
+    font-size: 1.1rem; /* 设置字体大小 */
+    line-height: 1.6;
+}
+
+.culture .maori p span {
+    font-size: 1.2rem; /* 设置字体大小 */
+    background-color: #fff; /* 更改span背景颜色 */
+    color: #000; /* 更改文字颜色 */
+    padding: 3px 8px; /* 调整内边距 */
+    border-radius: 8px;
+}
+
+.culture .maori img {
+    width: 45%; /* 设置图片宽度为100% */
+    margin-top: 20px; /* 调整上边距 */
+}
+
+.culture .maori .maoriList ul li {
+    margin-top: 20px; /* 调整列表项上边距 */
+}
+.culture .maori .maoriList img{
+    width: 30%;
+    display: inline-block;
+
+}
+
+.local-life {
+    margin-top: 50px; /* 增加和culture之间的间距 */
+    text-align: center; /* 居中显示 */
+}
+
+.local-life h1 {
+    font-size: 3rem; /* 设置字体大小 */
+    background-color: #000; /* 更改local life标题背景颜色 */
+    padding: 10px 20px; /* 增加内边距 */
+    border-radius: 12px;
+    display: inline-block; /* 让标题和文本在同一行 */
+    margin-bottom: 20px; /* 增加底部边距 */
+}
+
+.local-life p {
+    width: 50%; 
+    margin: 20px; 
+    font-size: 1.2rem; /* 设置字体大小 */
+    line-height: 1.6;
+    text-align: left;
+    margin-top: 40px;
+}
+.local-life img{
+    width: 40%;
+    float: right;
+    margin-right: 30px;
+}
+
+.local-life .rate img{
+    width: 25%;
+    transform: translateY(-350px) translateX(-30px);
+
+}
+
+.hero{
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px; /* 设定最大宽度以保持内容的可读性 */
+    padding: 20px; /* 增加内边距，使内容与边框之间有一定的距离 */
+    border: 2px solid #ccc; /* 添加边框以增强整体外观 */
+    border-radius: 10px; /* 圆角边框使外观更加柔和 */
+}
+
+.hero h1{
+    font-size: 40px;
+    text-align: center; /* 将标题居中对齐 */
+}
+
+.hero h2{
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.hero p{
+    width: 50%; /* 将段落的宽度设为100%，使其占据整个内容区域 */
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: justify; /* 段落内容两端对齐 */
+}
+
+.hero img{
+    width: 30%; /* 图片宽度调整为更大的比例 */
+    float: right;
+    margin-left: 20px; /* 图片与文本之间增加一些间距 */
+    margin-top: -300px;
+}
+
+.lit {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* 防止图像溢出 */
+}
+
+.lit p {
+    width: 60%;
+    line-height: 1.6;
+    color: #333; /* 深灰色文本 */
+    font-size: 20px; /* 适当的字体大小 */
+}
+
+.lit img {
+    float: right; /* 图像浮动在文本右侧 */
+    margin-left: 20px; /* 添加一些间距 */
+    margin-top: -320px;
+    border-radius: 5px; /* 圆角边框 */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* 图像阴影效果 */
+}
+
+.food{
+    margin-top: 50px;
+}
+
+.food .Hangi h1{
+    margin-top: 40px;
+    margin-left: 40px;
+    font-size: 2.2rem;
+}
+.food .Hangi h3{
+    margin: 40px;
+    font-size: 30px;
+
+}
+
+.food .Hangi p{
+    text-align: center;
+    width: 50%;
+    margin: 50px auto;
+    font-size: 1.2rem;
+}
+.food .Hangi img{
+    width: 45%;
+    display: inline-block;
+
+}
+
+.food .bbq h1{
+    margin-top: 40px;
+    margin-left: 40px;
+    font-size: 2.2rem;
+}
+.food .bbq h3{
+    margin: 40px;
+    font-size: 30px;
+
+}
+
+.food .bbq p{
+    text-align: center;
+    width: 50%;
+    margin: 50px auto;
+    font-size: 1.2rem;
+}
+.food .bbq img{
+    width: 45%;
+    display: inline-block;
+
+}
+.act{
+    margin-top: 40px;
+    margin-left: 10px;
+
+}
+.act h2{
+    font-size: 30px;
+
+}
+.act .box{
+    margin-top: 30px;
+    font-size: 20px;
+    display: inline-block;
+    width: 20%;
+    margin-left: 3%;
+    background-color: #fff;
+    color: #000000;
+    
+}
+
+.act .box p{
+    color: #000;
+}
+.act .box img{
+    width: 290px;
+    margin: 1px;
+    margin-top: 5px;
+
+}
+
+.ecotour{
+    margin: 50px;
+    width: 80%;
+    font-size: 20px;
+    margin-bottom: 100px;
+}
+
+.visiting {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.visiting h1 {
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+.visiting #tip {
+    font-family: Arial, sans-serif;
+    color: #666;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.visiting span {
+    font-weight: bold;
+    color: #007bff; /* 链接蓝色 */
+}
+.visiting h2 {
+    margin-top: 20px;
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #2980b9;
+    padding-bottom: 5px;
+}
+  
+.visiting h3 {
+    color: #2980b9;
+    font-size: 22px;
+    margin-top: 20px;
+}
+  
+.visiting h4 {
+    margin-top: 1   0px;
+    color: #555;
+    font-size: 18px;
+}
+  
+.visiting p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.visiting .tl{
+    margin-bottom: 30px;
+}
+
+.visiting #pda{
+    font-size: larger;
+}
+
+.life{
+    margin-left: 50px;
+
+}
+.life h1{
+    font-size: 40px;
+    width: 40%;
+}
+
+.life p{
+    width: 40%;
+    margin-top: 20px;
+    font-size: 20px;
+
+}
+
+.work{
+    float: right;
+    width: 40%;
+    margin-top: -780px;
+    margin-right: 40px;
+
+
+}
+.work h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+
+}
+.work p{
+    font-size: 20px;
+}
+.work div{
+    margin-top: 10px;
+}
+.work span{
+    font-size: 25px;
+    font-weight: 700;
+    color:tomato ;
+}
+.workSpace{
+    margin-left: 30px;
+
+}
+.workSpace p{
+    font-size: 20px;
+}
+
+.sports{
+    width: 80%;
+    border: #ccc solid 2px;
+    margin-top: 20px;
+    
+}
+section {
+    margin: 20px;
+    margin-top: 50px;
+}
+
+/* Style the about section */
+.sports #about {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
+/* Style the popular sports section */
+#popular-sports {
+    margin-top: 20px;
+}
+
+
+/* Style the list items */
+ol {
+    list-style-type: none;
+}
+
+/* Style the list items within the popular sports section */
+ol li {
+    margin-bottom: 10px;
+}
+
+/* Style the strong tags (for sport names) */
+strong {
+    color: #007bff;
+}
+
+.healthcare{
+    margin: 20px;
+    border: #ccc solid 2px;
+    font-size: larger;
+}
+
+
+.healthcare img{
+    width: 300px;
+    float: right;
+    margin-top: -250px;
+    margin-right: 100px;
+}
+
+.education{
+    margin: 20px;
+    border: #ccc solid 2px;
+    font-size: larger;
+
+}
+
+.education section {
+    margin-bottom: 30px;
+    width: 60%;
+}
+
+.education img{
+    width: 30%;
+    float: right;
+    margin-top: -500px;
+    margin-right: 100px;
+}
+
+.language {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+  
+.words {
+    flex: 1;
+    float: right;
+    width: 60%;
+}
+  
+.words h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+  
+.words p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+  
+.city {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.city img{
+    width: 60%;
+}
+  
+.intro {
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+  
+.intro h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+ }
+  
+.intro h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: fit-content;
+    background-color: #ccc;
+    color: #000;
+    border-radius: 12px;
+}
+  
+.intro p {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  
+.intro img {
+    max-width: 50%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.cite {
+    margin-top: 100px;
+    background-color: #fff;
+
+}
+.cite h1{
+    color: #000;
+
+}
+
+.cite p{
+    color: #000;
+}
+
+.map1{
+    display:flex ;
+    margin-top: 10px;
+}
+
+.map1 #nzmap{
+    display: block;
+    width: 500px;
+    float: left;
+    margin-left: 50px;
+}
+.map1 p{
+    display: block;
+    float: right;
+    margin-left: 300px;
+    margin-top: 50px;
+    border-radius: 10px;
+    border-color: darkblue;
+    border: 10px;
+    text-align: center;
+    color: rgb(83, 50, 1);
+    background-color: aliceblue;
+    font-size: 20px;
+    font-weight: 500;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    width: 500px;
+    padding: 10px;
+    height: fit-content;
+}
+
+.scene{
+    display: block;
+    margin-top: 50px;
+}
+
+.scene h3{
+    color: #000;
+    font-size: 50px;
+    float: right;
+    transform: translateY(-300px);
+    margin-right: 500px;
+}
+.scene h4{
+    display: block;
+    color: #000;
+    font-size: 40px;
+    margin-left: 100px;
+    margin-top: 100px;
+    width: 1300px;
+}
+
+.imgBox{
+    margin-top: 50px;
+    
+}
+
+.imgBox li{
+    list-style-type: none;
+}
+.imgBox .box1{
+    display: flex;
+}
+.imgBox li #one{
+    margin-left: 30px;
+    width: 650px;
+}
+
+.imgBox li #two{
+    margin-left: 50px;
+    width: 650px;
+    margin-top: 200px;
+}   
+
+.imgBox .box2{
+    display: flex;
+}
+
+.imgBox li #three{
+    width: 650px;
+    margin-left: 40px;
+    margin-top: -150px;
+}
+.imgBox li #four{
+    width: 650px;
+    margin-top: 30px;
+    margin-left: 40px;
+}
+.hobbit{
+    margin-top: 40px;
+    margin-left: 100px;
+}
+
+.hobbit h1{
+    margin-top: 100px;
+    font-size: 40px;
+    background-color: azure;
+    width: fit-content;
+    padding: 10px;
+    border: 5px solid black;
+    border-radius: 12px;
+    color: #000;
+}
+
+.hobbit .imageBox{
+    margin-top: 100px;
+}
+
+.hobbit .imageBox #book{
+    float: right;
+    transform: translateY(-150px);
+    border-left: 5px solid black;
+    width: 300px;
+    margin-right: 200px;
+}
+.hobbit .imageBox #hOne{
+    width: 700px;
+    margin-top: -40px;
+}
+
+.hobbit .imageBox #hHouse{
+    width: 500px;
+    margin-top: 30px;
+    float: left;
+}
+
+.hobbit .imageBox #hTwo{
+    margin-top: 30px;
+    width: 700px;
+    float: right;
+    margin-right: 50px;
+}
+
+.hobbit .imageBox #hThree{
+    margin-top: 20px;
+    width: 700px;
+    margin: 20px;
+}
+
+.end{
+    font-size: 18px;
+    background-color: aliceblue;
+    width: fit-content;
+    padding: 3px;
+    border-radius: 30px;
+    border: 3px solid black;
+}
+.end h1{
+    color: #000;
+}
